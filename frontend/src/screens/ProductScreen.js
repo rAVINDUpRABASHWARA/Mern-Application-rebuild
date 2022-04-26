@@ -140,12 +140,12 @@ function ProductScreen() {
               <h1>{product.name}</h1>
             </ListGroup.Item>
             <ListGroup.Item>
-              <Rating
+              {/* <Rating
                 rating={product.rating}
                 numReviews={product.numReviews}
-              ></Rating>
+              ></Rating> */}
             </ListGroup.Item>
-            <ListGroup.Item>Pirce : ${product.price}</ListGroup.Item>
+            <ListGroup.Item>Pirce :  Rs.{product.price}.00</ListGroup.Item>
             <ListGroup.Item>
               <Row xs={1} md={2} className="g-2">
                 {[product.image, ...product.images].map((x) => (
@@ -176,8 +176,8 @@ function ProductScreen() {
               <ListGroup variant="flush">
                 <ListGroup.Item>
                   <Row>
-                    <Col>Price:</Col>
-                    <Col>${product.price}</Col>
+                    <Col>Price: </Col>
+                    <Col>Rs.{product.price}.00</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
@@ -207,7 +207,7 @@ function ProductScreen() {
           </Card>
         </Col>
       </Row>
-      <div className="my-3">
+      {/* <div className="my-3">
         <h2 ref={reviewsRef}>Reviews</h2>
         <div className="mb-3">
           {product.reviews.length === 0 && (
@@ -273,7 +273,7 @@ function ProductScreen() {
             </MessageBox>
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
